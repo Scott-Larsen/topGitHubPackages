@@ -1,0 +1,91 @@
+/* Kudos to CSS Tricks for the color scheme/ inspiration */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    padding: 0;
+    margin: 0;
+    color: hsl(253, 56%, 13%);
+}
+
+a {
+    color: hsl(253, 56%, 33%);
+}
+
+a:visited {
+    color: hsl(253, 56%, 23%);
+}
+a:hover {
+    color: hsl(253, 56%, 43%);
+}
+
+header {
+    color: white;
+    background-color: hsl(253, 56%, 13%);
+    font-size: 2rem;
+    line-height: 1.6rem;
+    text-align: center;
+    padding: .8em;
+    margin: 0; 
+}
+
+header a {
+    color: white;
+}
+
+header a:hover {
+    color: hsl(253, 56%, 80%);
+}
+
+table {
+    display: inline-block;
+    float: left;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#tableTitle {
+    font-size: 3rem;
+    color: white;
+    background-image: linear-gradient(-45deg, #DA1C5E, #FD8602);
+    border-radius: .35rem;
+    border-top-left-radius: .8em;
+    padding: .6rem 1.3rem;
+    margin: 1rem;
+}
+
+.columnHeader {
+    height: 2rem;
+    font-size: 1.5rem;
+    background: none;
+    padding: 5rem 0;
+}
+
+tr:nth-child(odd) {
+    background: hsl(253, 56%, 95%);
+}
+
+tr:nth-child(1) {
+    background: none;
+}
+
+th {
+    padding: .3rem 0 .1rem 0;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+/* table tr td:nth-child(odd) { */
+.tdLeft {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 10.8rem;
+}

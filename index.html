@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GitHub Packages by Stars - Python</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="table-responsive">
+                <header>Top 30 Packages/ Libraries for each Language on <a href="github.com">GitHub</a> ranked by Stars</header>
+                <br />
+
+                <table class="table table-bordered table-striped" id="python_table">
+                        <tr>
+                            <th colspan="2" id="tableTitle">Python</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="javascript_table">
+                    <tr>
+                        <th colspan="3" id="tableTitle">Javascript</th>
+                    </tr>
+                    <tr class="columnHeader">
+                        <th class="alignLeft">Name</th>
+                        <th class="alignRight">Stars</th>
+                    </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="rust_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">Rust</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="go_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">Go</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="swift_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">Swift</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="cplusplus_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">C++</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="typescript_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">TypeScript</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="java_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">Java</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="fsharp_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">F#</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="csharp_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">C#</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="r_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">R</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+
+                <table class="table table-bordered table-striped" id="c_table">
+                        <tr>
+                            <th colspan="3" id="tableTitle">C</th>
+                        </tr>
+                        <tr class="columnHeader">
+                            <th class="alignLeft">Name</th>
+                            <th class="alignRight">Stars</th>
+                        </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+$(document).ready(function(){    
+    $.getJSON("json/python.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#python_table').append(employee_data);
+    });
+
+    $.getJSON("json/javascript.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#javascript_table').append(employee_data);
+    });
+    
+    $.getJSON("json/rust.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#rust_table').append(employee_data);
+    });
+    
+    $.getJSON("json/go.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#go_table').append(employee_data);
+    });
+    
+    $.getJSON("json/swift.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#swift_table').append(employee_data);
+    });
+
+});
+    
+    $.getJSON("json/cplusplus.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#cplusplus_table').append(employee_data);
+    });
+    
+    $.getJSON("json/typescript.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#typescript_table').append(employee_data);
+    });
+    
+    $.getJSON("json/java.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#java_table').append(employee_data);
+    });
+    
+    $.getJSON("json/fsharp.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#fsharp_table').append(employee_data);
+    });
+    
+    $.getJSON("json/csharp.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#csharp_table').append(employee_data);
+    });
+    
+    $.getJSON("json/r.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#r_table').append(employee_data);
+    });
+    
+    $.getJSON("json/c.json", function(data){
+        var employee_data = '';
+        $.each(data, function(key, value){
+            employee_data += '<tr>';
+            employee_data += '<td class="tdLeft"><a href='+value.html_url+'>'+value.name+'</a></td>';
+            employee_data += '<td class="alignRight">'+value.stargazers_count+'</td>';
+            employee_data += '</tr>';
+        });
+        $('#c_table').append(employee_data);
+    });
+
+</script>
